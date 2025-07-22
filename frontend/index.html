@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lead Intent Score</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, select, textarea { margin: 5px; padding: 5px; width: 250px; }
+    button { padding: 10px 15px; margin-top: 10px; }
+    table { margin-top: 20px; border-collapse: collapse; width: 80%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h2>Lead Intent Form</h2>
+  <form id="leadForm">
+    <label>Email:</label><br>
+    <input type="email" id="email" required><br>
+
+    <label>Credit Score:</label><br>
+    <input type="number" id="credit_score" min="300" max="850" required><br>
+
+    <label>Age Group:</label><br>
+    <select id="age_group">
+      <option>18-25</option>
+      <option>26-35</option>
+      <option>36-50</option>
+      <option>51+</option>
+    </select><br>
+
+    <label>Family Background:</label><br>
+    <select id="family">
+      <option>Single</option>
+      <option>Married</option>
+      <option>Married with Kids</option>
+    </select><br>
+
+    <label>Income (INR):</label><br>
+    <input type="number" id="income" required><br>
+
+    <label>Comments:</label><br>
+    <textarea id="comments" rows="3" required></textarea><br>
+
+    <label><input type="checkbox" id="consent" required> I consent to data processing</label><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Scored Leads</h3>
+  <table id="resultsTable">
+    <tr>
+      <th>Email</th>
+      <th>Initial Score</th>
+      <th>Re-ranked Score</th>
+      <th>Comments</th>
+    </tr>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
